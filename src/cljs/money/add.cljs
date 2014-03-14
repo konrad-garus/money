@@ -2,7 +2,7 @@
   (:require-macros [clang.angular :refer [def.controller def.config defn.scope def.filter fnj]])
   (:use [clang.util :only [? module]]))
 
-(def m (module "money.add" ["clang"]))
+;(def m (module "money.add" ["clang"]))
 
 ;(def.controller m TodoCtrl [$scope]
 ;  (assoc! $scope :todos [{:text "learn angular" :done "yes"}
@@ -15,7 +15,7 @@
 ;      (remove #{"yes"})
 ;      count)))
 
-(def.controller m add-controller [$scope]
+;(def.controller m add-controller [$scope]
   ;(.log js/console "Bababa")
-  nil)
-
+;  nil)
+;

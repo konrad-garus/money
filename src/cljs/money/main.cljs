@@ -1,17 +1,16 @@
 (ns money.main
-  (:require-macros [clang.angular :refer [def.controller def.config defn.scope def.filter fnj]])
-  (:require [clang.core]
-            [money.add])
-  (:use [clang.util :only [? module]]))
+  (:require [secretary.core :as secretary :include-macros true :refer [defroute]]
+            [goog.events :as events])
+  (:import goog.History
+           goog.history.EventType))
 
-(def m (module "money" ["clang", "ngRoute", "money.add"]))
+(defroute "/" []
+  (.setToken (History.) "/add"))
 
-(def.config m [$routeProvider]
-  (doto $routeProvider
-    (.when "/add" (js-obj 
-                    "templateUrl" "templates/add.html"
-                    "controller" "add-controller"))
-    (.otherwise (js-obj "redirectTo" "/add"))
-    ))
+(defroute "/add" []
+  (js/console.log "In ADD page")
+  )
 
-
+(doto (History.)
+  (goog.events/listen EventType/NAVIGATE #(secretary/dispatch! (.-token %)))
+  (.setEnabled true))

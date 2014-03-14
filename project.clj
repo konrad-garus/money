@@ -2,9 +2,11 @@
   :description "FIXME: write this!"
   :url "http://example.com/FIXME"
   :dependencies [[org.clojure/clojure "1.5.1"]
-                 [org.clojure/clojurescript "0.0-2030"]
+                 [org.clojure/clojurescript "0.0-2173"]
                  [ring "1.2.1"]
-                 [xnlogic/clobber "0.1.0-SNAPSHOT"]]
+                 [xnlogic/clobber "0.1.0-SNAPSHOT"]
+                 [secretary "1.0.2"]
+                 [enfocus "2.0.2"]]
   :plugins [[lein-cljsbuild "1.0.0-alpha2"]
             [lein-ring "0.8.8"]]
   :hooks [leiningen.cljsbuild]
