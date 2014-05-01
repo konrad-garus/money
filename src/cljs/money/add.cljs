@@ -1,6 +1,7 @@
 (ns money.add
-  (:require-macros [clang.angular :refer [def.controller def.config defn.scope def.filter fnj]])
-  (:use [clang.util :only [? module]]))
+;  (:require-macros [clang.angular :refer [def.controller def.config defn.scope def.filter fnj]])
+;  (:use [clang.util :only [? module]])
+)
 
 ;(def m (module "money.add" ["clang"]))
 

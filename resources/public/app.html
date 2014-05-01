@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html ng-app="money">
+<html>
 <head>
 <link rel="stylesheet" href="css/page.css" />
 <link rel="stylesheet" href="css/bootstrap-3.0.2.css" />
 <link rel="stylesheet" href="css/bootstrap-theme-3.0.2.css" />
+<script type='text/javascript' id='lt_ws' src='http://localhost:45579/socket.io/lighttable/ws.js'></script>
+
+
 </head>
 <body>
+	<div id="navigation"></div>
 	<div class="container-fluid">
-		<div ng-view></div>
+		<div id="view">Loading...</div>
 	</div>
 
 	<script src="js/jquery-2.0.3.js"></script>
-<!-- 	<script src="js/angular-1.2.0.js"></script> -->
-<!-- 	<script src="js/angular-route-1.2.0.js"></script> -->
 	<script src="js/bootstrap-3.0.2.js"></script>
+	<script src="http://fb.me/react-0.9.0.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
